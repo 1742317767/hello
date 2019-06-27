@@ -1,0 +1,30 @@
+spring:
+  profiles: 
+    active: dev
+#1.使用yml文件有层级结构
+#2.使用yml文件key value之家使用冒号链接
+#3.赋值时冒号后面必须加空格
+---
+spring:
+  profiles: dev
+server:
+  port: 80
+  servlet:
+    context-path: /
+    
+#为user属性赋值 可以编辑中文
+user:
+  id: 100
+  username: 哥斯拉
+  age: 2002 
+--- 
+spring:
+  profiles: prod
+server:
+  port: 8090
+  servlet:
+    context-path: /jt
+user:
+  id: 100
+  username: 哥斯拉
+  age: 2002 
